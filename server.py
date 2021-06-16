@@ -28,7 +28,7 @@ def predict(filename):
     return { "err" : "Image not found", "status": 404}, 404
   except Exception as e:
     print("Error", e)
-    return e
+    return { "err" : "Internall error", "status": 500}, 500
 
 if __name__ == '__main__':
   # app.debug = True 
