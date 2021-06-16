@@ -27,7 +27,8 @@ def predict(filename):
   except requests.exceptions.HTTPError:
     return { "err" : "Image not found", "status": 404}, 404
   except Exception as e:
-    return {"err" : e, "status": 500}, 500
+    print("Error", e)
+    return e
 
 if __name__ == '__main__':
   # app.debug = True 
